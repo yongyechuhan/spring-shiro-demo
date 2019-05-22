@@ -12,7 +12,7 @@
 	<context:property-placeholder location="classpath:resources.properties" />
 
 
-	<bean class="com.changingpay.shiro.util.SpringUtils" />
+	<bean class="com.liuxin.shiro.util.SpringUtils" />
 
 	<!-- 开启AOP监听 只对当前配置文件有效 -->
 	<aop:aspectj-autoproxy expose-proxy="true" />
@@ -83,7 +83,7 @@
 	<bean id="exceptionHandlerExceptionResolver" class="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
 	</bean>
 
-	<bean class="com.changingpay.shiro.web.exception.DefaultExceptionHandler" />
+	<bean class="com.liuxin.shiro.web.exception.DefaultExceptionHandler" />
 
 	<import resource="spring-mvc-shiro.xml" />
 </beans>

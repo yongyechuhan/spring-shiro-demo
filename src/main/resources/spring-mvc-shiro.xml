@@ -14,7 +14,7 @@
 	</bean>
 
 	<!-- 凭证匹配器 -->
-	<bean id="credentialsMatcher" class="com.changingpay.shiro.credentials.RetryLimitHashedCredentialsMatcher">
+	<bean id="credentialsMatcher" class="com.liuxin.shiro.credentials.RetryLimitHashedCredentialsMatcher">
 		<constructor-arg ref="shiroEhcacheManager" />
 		<property name="hashAlgorithmName" value="md5" />
 		<property name="hashIterations" value="2" />
@@ -42,9 +42,9 @@
 		<property name="loginUrl" value="/login" />
 	</bean>
 
-	<bean id="sysUserFilter" class="com.changingpay.shiro.web.shiro.filter.SysUserFilter" />
+	<bean id="sysUserFilter" class="com.liuxin.shiro.web.shiro.filter.SysUserFilter" />
 
-	<bean id="userRealm" class="com.changingpay.shiro.realm.UserRealm">
+	<bean id="userRealm" class="com.liuxin.shiro.realm.UserRealm">
 		<property name="credentialsMatcher" ref="credentialsMatcher" />
 		<property name="cachingEnabled" value="true" />
 	</bean>
